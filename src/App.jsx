@@ -1,18 +1,20 @@
-// import React from 'react'
+import Navbar from "./components/Navbar";
+import Sidebar from "./components/SideBar";
+import "./App.css";
+import MiddleBar from "./components/MiddleBar";
 
-import Sidebar from "./components/SideBar"
-import "./App.css"
-import MiddleBar from "./components/MiddleBar"
 function App() {
   return (
-    <div className="h-screen w-screen bg-white overflow-x-hidden">
-      <div className="w-full h-20 bg-red-400 mb-2"></div>
-      <div className="w-full">
-      <Sidebar/>
-      <MiddleBar/>
+    <div className="h-screen w-screen bg-white overflow-x-hidden flex flex-col">
+      <div className="h-20 mb-2">
+        <Navbar />
+      </div>
+      <div className="flex flex-grow">
+        <Sidebar />
+        <MiddleBar />
       </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
